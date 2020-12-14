@@ -1,0 +1,90 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: $wght-light;
+
+    margin-top: 1.5rem;
+
+    @media screen and (min-width: $bp) {
+      font-size: 2rem;
+    }
+  }
+
+  &__form {
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+
+    @media screen and (min-width: $bp) {
+      width: 64rem;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: 4rem;
+      margin-bottom: 9rem;
+    }
+  }
+}
+
+.form {
+  > * + * {
+    margin-top: 1rem;
+
+    @media screen and (min-width: $bp) {
+      margin-top: unset;
+    }
+  }
+
+  &__item {
+    border-radius: 9999px;    
+    height: 3.7rem;
+    font-family: inherit;
+
+    @media screen and (min-width: $bp) {
+      height: 5.5rem;
+    }
+
+    &--input {
+      border: 1px solid $pale-blue;
+      padding-left: 3rem;
+
+      &::placeholder {
+        color: $pale-blue;
+      }
+
+      @media screen and (min-width: $bp) {
+        width: 66%;
+        &::placeholder {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &--btn {
+      border: none;
+      font-size: 1.2rem;
+      font-weight: $wght-medium;
+      color: white;
+      background-color: $blue;
+      box-shadow: 0 1rem 2rem -1rem rgba($blue, .8);
+
+      cursor: pointer;
+      &:active {
+        opacity: .8;
+      }
+
+      @media screen and (min-width: $bp) {
+        width: 31%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

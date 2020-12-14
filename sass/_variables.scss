@@ -1,0 +1,20 @@
+// COLORS
+$blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$very-dark-blue: hsl(209, 33%, 12%);
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+$font-default: 'Libre Franklin', sans-serif;
+$wght-light: 300;
+$wght-medium: 500;
+$wght-semi-bold: 600;
+$wght-bold: 700;
+
+// BREAKPOINTS
+// $bp-mobile: 375px;
+// $bp-desktop: 1440px;
+
+$bp: 720px;
