@@ -77,6 +77,7 @@
       box-shadow: 0 1rem 2rem -1rem rgba($blue, .8);
 
       cursor: pointer;
+      outline: none;
       &:active {
         opacity: .8;
       }

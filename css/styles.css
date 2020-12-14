@@ -134,6 +134,7 @@ ul {
   background-color: #4f7df3;
   box-shadow: 0 1rem 2rem -1rem rgba(79, 125, 243, 0.8);
   cursor: pointer;
+  outline: none;
 }
 .form__item--btn:active {
   opacity: 0.8;
