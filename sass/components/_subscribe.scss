@@ -48,6 +48,8 @@
     height: 3.7rem;
     font-family: inherit;
 
+    outline: none;
+
     @media screen and (min-width: $bp) {
       height: 5.5rem;
     }
@@ -77,7 +79,6 @@
       box-shadow: 0 1rem 2rem -1rem rgba($blue, .8);
 
       cursor: pointer;
-      outline: none;
       &:active {
         opacity: .8;
       }
