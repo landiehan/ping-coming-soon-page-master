@@ -35,6 +35,8 @@
 }
 
 .form {
+  position: relative; // for input error message
+
   > * + * {
     margin-top: 1rem;
 
@@ -48,45 +50,81 @@
     height: 3.7rem;
     font-family: inherit;
 
-    outline: none;
+    outline: none;  // remove default focus style
 
     @media screen and (min-width: $bp) {
       height: 5.5rem;
     }
+  }
 
-    &--input {
-      border: 1px solid $pale-blue;
-      padding-left: 3rem;
+  &__input {
+    color: $pale-blue;
+    border: 1px solid $pale-blue;
+    padding-left: 3rem;
 
-      &::placeholder {
-        color: $pale-blue;
-      }
-
-      @media screen and (min-width: $bp) {
-        width: 66%;
-        &::placeholder {
-          font-size: 1.6rem;
-        }
-      }
+    &::placeholder {
+      color: $pale-blue;
     }
 
-    &--btn {
-      border: none;
-      font-size: 1.2rem;
-      font-weight: $wght-medium;
-      color: white;
-      background-color: $blue;
-      box-shadow: 0 1rem 2rem -1rem rgba($blue, .8);
+    &:focus {
+      border-width: 2px;
+    }
 
-      cursor: pointer;
-      &:active {
-        opacity: .8;
-      }
+    &--error {
+      border-width: 2px;
+      border-color: $light-red;
+    }
 
-      @media screen and (min-width: $bp) {
-        width: 31%;
-        font-size: 1.6rem;
-      }
+    @media screen and (min-width: $bp) {
+      width: 66%;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__input-error {
+    color: $light-red;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    // padding-bottom: 1.5rem;
+
+    @media screen and (min-width: $bp) {
+      position: absolute;
+      top: 6rem;
+      left: 4rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__btn {
+    border: none;
+    font-size: 1.2rem;
+    font-weight: $wght-medium;
+    color: white;
+    background-color: $blue;
+    box-shadow: 0 1rem 2rem -1rem rgba($blue, .8);
+
+    &:focus {
+      outline: 1px dashed $pale-blue;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;  // no use for firefox
+    }
+
+    &:focus-visible {
+      outline: 1px dashed $pale-blue;
+    }
+
+    cursor: pointer;
+    &:active {
+      opacity: .8;
+    }
+
+    @media screen and (min-width: $bp) {
+      width: 31%;
+      font-size: 1.6rem;
     }
   }
 }
