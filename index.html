@@ -21,8 +21,10 @@
   <section class="ping__subscribe subscribe">
     <h2 class="subscribe__title">Subscribe and get notified</h2>
     <form class="subscribe__form form">
-      <input class="form__item form__item--input" type="text" placeholder="Your email address...">
-      <button class="form__item form__item--btn">Notify Me</button>
+      <label for="email"></label>
+      <input class="form__item form__input" id="email" type="text" placeholder="Your email address...">       
+      <span class="form__input-error" aria-live="polite"></span>    
+      <button class="form__item form__btn" aria-label="subscribe">Notify Me</button>
     </form>
   </section>
 
@@ -31,24 +33,24 @@
   <footer class="footer">
     <ul class="footer__list-link">
       <li>
-        <a class="link link--rounded" href="#">
-          <svg class="icon icon--facebook">
+        <a class="link link--rounded" href="#" aria-label="facebook">
+          <svg class="icon icon--facebook" aria-hidden="true">
             <use href="#facebook" />
           </svg>
         </a>        
       </li>
 
       <li>
-        <a class="link link--rounded" href="#">
-          <svg class="icon icon--twitter">
+        <a class="link link--rounded" href="#" aria-label="twitter">
+          <svg class="icon icon--twitter" aria-hidden="true">
             <use href="#twitter" />
           </svg>
         </a>        
       </li>
 
       <li>
-        <a class="link link--rounded" href="#">
-          <svg class="icon icon--instagram">
+        <a class="link link--rounded" href="#" aria-label="instagram">
+          <svg class="icon icon--instagram" aria-hidden="true">
             <use href="#instagram" />
           </svg>
         </a>        
@@ -76,5 +78,7 @@
     </symbol>
   </svg>
   <!--SVG SOURCE END-->
+
+  <script src="./scripts/emailValidation.js"></script>
 </body>
 </html>
