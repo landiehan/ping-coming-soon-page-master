@@ -93,6 +93,9 @@ ul {
   }
 }
 
+.form {
+  position: relative;
+}
 .form > * + * {
   margin-top: 1rem;
 }
@@ -112,22 +115,43 @@ ul {
     height: 5.5rem;
   }
 }
-.form__item--input {
+.form__input {
+  color: #c2d3ff;
   border: 1px solid #c2d3ff;
   padding-left: 3rem;
 }
-.form__item--input::placeholder {
+.form__input::placeholder {
   color: #c2d3ff;
 }
+.form__input:focus {
+  border-width: 2px;
+}
+.form__input--error {
+  border-width: 2px;
+  border-color: #ff5263;
+}
 @media screen and (min-width: 720px) {
-  .form__item--input {
+  .form__input {
     width: 66%;
-  }
-  .form__item--input::placeholder {
     font-size: 1.6rem;
   }
 }
-.form__item--btn {
+.form__input-error {
+  color: #ff5263;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  display: block;
+}
+@media screen and (min-width: 720px) {
+  .form__input-error {
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    font-size: 1.3rem;
+  }
+}
+.form__btn {
   border: none;
   font-size: 1.2rem;
   font-weight: 500;
@@ -136,11 +160,20 @@ ul {
   box-shadow: 0 1rem 2rem -1rem rgba(79, 125, 243, 0.8);
   cursor: pointer;
 }
-.form__item--btn:active {
+.form__btn:focus {
+  outline: 1px dashed #c2d3ff;
+}
+.form__btn:focus:not(:focus-visible) {
+  outline: none;
+}
+.form__btn:focus-visible {
+  outline: 1px dashed #c2d3ff;
+}
+.form__btn:active {
   opacity: 0.8;
 }
 @media screen and (min-width: 720px) {
-  .form__item--btn {
+  .form__btn {
     width: 31%;
     font-size: 1.6rem;
   }
@@ -183,12 +216,13 @@ ul {
   height: 3rem;
   border-radius: 50%;
   border: 1px solid #c2d3ff;
+  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
   fill: #4f7df3;
 }
-.link:hover {
+.link:hover, .link:focus {
   fill: white;
   background-color: #4f7df3;
   border: none;
