@@ -4,6 +4,7 @@
   height: 3rem;
   border-radius: 50%;
   border: 1px solid $pale-blue;
+  outline: none;
 
   display: flex;
   justify-content: center;
@@ -11,7 +12,8 @@
 
   fill: $blue;
   
-  &:hover {
+  &:hover,
+  &:focus {
     fill: white;
     background-color: $blue;
     border: none;
